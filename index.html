@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Prompt', sans-serif;
+            background: linear-gradient(135deg, #2e3ff6ff, #d152f5ff);
+            color: #fff;
+            overflow-x: hidden;
+            animation: bgMove 10s infinite alternate ease-in-out;
+        }
+        @keyframes bgMove {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 30px auto;
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(12px);
+            border-radius: 25px;
+            padding: 40px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+            animation: fadeIn 1.2s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        .profile-pic {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 0 20px rgba(255,255,255,0.7);
+            animation: glow 3s infinite alternate ease-in-out;
+        }
+        @keyframes glow {
+            0% { box-shadow: 0 0 10px rgba(255,255,255,0.4); }
+            100% { box-shadow: 0 0 25px rgba(255,255,255,0.9); }
+        }
+        h2 {
+            border-bottom: 2px solid rgba(255,255,255,0.5);
+            padding-bottom: 10px;
+            position: relative;
+        }
+        h2::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #fff;
+            animation: underline 1.5s forwards ease;
+        }
+        @keyframes underline {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        .row {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .col {
+            flex: 1;
+            min-width: 300px;
+        }
+        .box {
+            background: rgba(255,255,255,0.2);
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            backdrop-filter: blur(6px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.25);
+        }
+        ul li { margin-bottom: 8px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <img src="ภาพ.jpg" class="profile-pic" alt="Profile">
+        <h1>ประวัติส่วนตัว</h1>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <h2>ข้อมูลส่วนตัว</h2>
+            <div class="box">
+                <p><b>ชื่อ:</b>ณัฐนนท์ มีหล้า</p>
+                <p><b>ชื่อเล่น:</b>อ้น</p>
+                <p><b>รหัสนักศึกษา:</b>66124630106</p>
+                <p><b>วันเกิด:</b>02 มีนาคม 2548</p>
+                <p><b>อายุ:</b> 20 ปี</p>
+                <p><b>มหาวิทยาลัย:</b> มหาวิทยาลัยราชภัฎเทพสตรี</p>
+                <p><b>สาขา:</b> เทคโนโลยีดิจิทัล เอกวิทยาการคอมพิวเตอร์</p>
+            </div>
+        </div>
+
+        <div class="col">
+            <h2>Contact</h2>
+            <div class="box">
+                <p><b>📱 โทร:</b> 0960700792</p>
+                <p><b>LINE:</b> oansonic</p>
+                <p><b>Facebook:</b>Nattanon Meela</p>
+                <p><b>Email:</b>66124630106@lawasri.tru.ac.th</p>
+            </div>
+        </div>
+    </div>
+
+    <h2>ประวัติการศึกษา</h2>
+    <div class="box">
+        <ul>
+            <li><b>ประถมศึกษา:</b> บ้านหมอ พัฒนราฎ</li>
+            <li><b>มัธยมศึกษา:</b> บ้านหมอ พัฒนานุกูล</li>
+            <li><b>ปริญญาตรี:</b> มหาวิทยาลัยราชภัฎเทพสตรี</li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
